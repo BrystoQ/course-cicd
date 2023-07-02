@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+  </head>
+  <body>
+    <nav>
+      <% if (user) { %>
+      <a href="/user">Profile</a>
+      <form action="/auth/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+      <% } else { %>
+      <a href="/auth/login">Login</a>
+      <a href="/auth/register">Register</a>
+      <% } %>
+    </nav>
+    <main><%= body %></main>
+  </body>
+</html>
